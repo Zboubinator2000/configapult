@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use App\Entity\User\ShopUser;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -50,6 +51,12 @@ class QuotationRequest
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $Image5;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\User\ShopUser", inversedBy="quotationRequests")
+     * @ORM\JoinColumn(nullable=false)
+     */
+    private $User;
 
     public function getId(): ?int
     {
@@ -136,6 +143,18 @@ class QuotationRequest
     public function setImage5(?string $Image5): self
     {
         $this->Image5 = $Image5;
+
+        return $this;
+    }
+
+    public function getUser(): ?ShopUser
+    {
+        return $this->User;
+    }
+
+    public function setUser(?ShopUser $User): self
+    {
+        $this->User = $User;
 
         return $this;
     }
