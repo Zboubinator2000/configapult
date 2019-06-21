@@ -1,0 +1,4 @@
+quotation:
+    resource: |
+        alias: app.quotation
+    type: sylius.resource
