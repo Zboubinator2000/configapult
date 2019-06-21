@@ -5,6 +5,7 @@ namespace App\Entity\Quotation;
 use App\Entity\User\ShopUser;
 use Doctrine\ORM\Mapping as ORM;
 use Sylius\Component\Resource\Model\ResourceInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\QuotationRequestRepository")

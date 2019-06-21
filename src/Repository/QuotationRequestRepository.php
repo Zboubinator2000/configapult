@@ -2,7 +2,7 @@
 
 namespace App\Repository;
 
-use App\Entity\QuotationRequest;
+use App\Entity\Quotation\QuotationRequest;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Symfony\Bridge\Doctrine\RegistryInterface;
 

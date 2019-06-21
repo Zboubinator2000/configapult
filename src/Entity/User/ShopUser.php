@@ -19,7 +19,7 @@ use Sylius\Component\Core\Model\ShopUser as BaseShopUser;
 class ShopUser extends BaseShopUser
 {
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\QuotationRequest", mappedBy="User")
+     * @ORM\OneToMany(targetEntity="App\Entity\Quotation\QuotationRequest", mappedBy="User")
      */
     private $quotationRequests;
 
